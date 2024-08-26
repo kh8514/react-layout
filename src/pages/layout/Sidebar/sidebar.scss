@@ -1,0 +1,52 @@
+@import "./burger/bugger.scss";
+@import "./nav/nav.scss";
+
+
+button {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  text-align: left;
+}
+
+.sidebar {
+  width: 83px;
+  height: 100%;
+  gap: 8px;
+  padding: 0 16px;
+  background: rgba(255, 255, 255, 10%);
+  border-right: 1px solid #2e303e;
+  backdrop-filter: blur(10px);
+  transition: width 0.45s;
+  overflow-y: scroll;
+
+  &.open {
+    width: 260px;
+    transition: 0.45s;
+
+    :is(.sidebar-header) {
+      flex-direction: row-reverse;
+    }
+
+    :is(.logo) {
+      display: block;
+      transition: 1s;
+    }
+
+    :is(.sidebar .nav-button .hasSub) {
+      opacity: 1;
+      transition: 2s;
+    }
+  }
+
+  &:not(.open) button:hover p {
+    opacity: 1;
+  }
+
+  .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+  }
+}
