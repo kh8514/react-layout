@@ -1,3 +1,5 @@
+@import '../../variable.scss';
+
 .burger {
     position: relative;
     width: 28px;
@@ -5,14 +7,14 @@
     display: block;
     border-radius: 2px;
     height: 2px;
-    background: #f9f9f9;
+    background: $sidebar-light-color;
     transition: 0.3s;
     
     &::before, &::after {
         display: block;
         border-radius: 2px;
         height: 2px;
-        background: #f9f9f9;
+        background: $sidebar-light-color;
         transition: 0.3s;
     }
     
@@ -72,6 +74,6 @@
 
     &:hover {
         opacity: 1;
-        background: #8f44fd;
+        background: $sidebar-light-hover;
     }
 }

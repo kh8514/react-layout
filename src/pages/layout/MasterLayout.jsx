@@ -1,17 +1,21 @@
 import { Outlet } from "react-router-dom"
 import { SidebarContextProvider } from "../../contexts/SidebarContext"
 import Sidebar from "./Sidebar/Sidebar"
+import Header from "./Header/Header"
+
+import "./layout.scss"
 
 const MasterLayout = () => {
     return (
-        <div className="">
-            <div className="flex flex-row w-full h-dvh">
-                <SidebarContextProvider>
-                    <Sidebar />
-                    <Outlet />
-                </SidebarContextProvider>           
-            </div>
-        </div>
+        <>
+            <SidebarContextProvider>
+                <Sidebar className="App-sidebar"/>  
+                <div className="App-content md:pl-83">
+                    <Header className="App-header"/>
+                    <Outlet className="App-main"/>
+                </div>
+            </SidebarContextProvider>           
+        </>
     )
 }
 

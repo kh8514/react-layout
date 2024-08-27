@@ -1,3 +1,4 @@
+@import "../variable.scss";
 @import "./burger/bugger.scss";
 @import "./nav/nav.scss";
 
@@ -11,18 +12,17 @@ button {
 }
 
 .sidebar {
-  width: 83px;
+  width: $sidebar-min-width;
   height: 100%;
   gap: 8px;
   padding: 0 16px;
-  background: rgba(255, 255, 255, 10%);
-  border-right: 1px solid #2e303e;
+  background: $sidebar-bg-color;
+  border-right: 1px solid #c5c5c5;
   backdrop-filter: blur(10px);
   transition: width 0.45s;
-  overflow-y: scroll;
 
   &.open {
-    width: 260px;
+    width: $sidebar-max-width;
     transition: 0.45s;
 
     :is(.sidebar-header) {

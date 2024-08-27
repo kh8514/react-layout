@@ -5,7 +5,6 @@ import NavButton from "./nav/NavButton";
 import SubMenu from "./nav/SubMenu";
 import { IconAddBox, IconCart, IconHeart, IconHome, IconLock, IconSetting } from "assets/icons/Icons";
 import { useSidebarContext } from "contexts/SidebarContext";
-import NavFooter from "./nav/NavFooter";
 
 const menuItems = [
     {
@@ -49,9 +48,11 @@ const Sidebar = () => {
     }
 
     return (
-        <section>
-            <aside className={`sidebar${isOpen ? " open" : ""}`}>
+        <section className="z-[100] hidden md:block fixed top-0 bottom-0 left-0 md:mr-0 md:ml-0">
+            <aside className={`sidebar${isOpen ? " open" : ""} `}>
                 <NavHeader/>
+                <div>
+
                 {menuItems.map((item, index)=>(
                     <nav className="sidebar-nav">
                         {!item.items && (
@@ -84,7 +85,7 @@ const Sidebar = () => {
                         )}
                     </nav>
                 ))}
-                <NavFooter />
+                </div>
             </aside>
         </section>
     )

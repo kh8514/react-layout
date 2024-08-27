@@ -1,0 +1,11 @@
+.nav-header {
+    backdrop-filter: blur(10px);
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    min-width: 90%;
+    padding: 15px 30px;
+    border-radius: 5px;
+}

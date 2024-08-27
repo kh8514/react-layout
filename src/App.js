@@ -2,9 +2,10 @@ import { Outlet } from 'react-router-dom';
 
 function App() {
   return (
-    <>
-      <Outlet/>
-    </>
+      <div className="layout-container">
+        <Outlet/>
+      </div>
+    
   );
 }
 
