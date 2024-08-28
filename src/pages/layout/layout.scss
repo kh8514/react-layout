@@ -10,7 +10,7 @@
 }
 
 .App-sidebar {
-    background-color: $sidebar-bg-color;
+    background-color: $sidebar-light-bg-color;
     padding: 1rem;
     min-width: $sidebar-min-width; /* 사이드바 최소 너비 */
 }
@@ -29,14 +29,11 @@
 }
 
 .App-header {
-    background-color: #282c34;
-    color: white;
     text-align: center;
     padding: 1rem;
   }
 
   .App-main {
-    background-color: #ffffff;
     padding: 1rem;
     flex-grow: 1; /* 메인 콘텐츠가 남은 공간을 채우도록 설정 */
   }

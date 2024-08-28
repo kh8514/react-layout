@@ -45,12 +45,12 @@
         }
 
         &::before {
-            transform: rotate(-45deg) translate(-5px, 3px);
+            transform: rotate(-45deg) translate(-5px, 2px);
             transition: 0.5s;
         }
 
         &::after {
-            transform: rotate(45deg) translate(-5px, -3px);
+            transform: rotate(45deg) translate(-5px, -2px);
             transition: 0.5s;
         }
     }

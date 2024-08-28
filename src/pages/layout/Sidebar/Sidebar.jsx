@@ -56,7 +56,7 @@ const Sidebar = () => {
   };
 
   return (
-    <section className="z-[100] hidden md:block fixed top-0 bottom-0 left-0 md:mr-0 md:ml-0">
+    <section className="z-[100] hidden md:block fixed top-0 bottom-0 left-0 md:mr-0 md:ml-0 z-[1600]">
       <aside className={`sidebar${isOpen ? " open" : ""} `}>
         <NavHeader />
         <div>

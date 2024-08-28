@@ -1,52 +1,139 @@
-import avatar from "../assets/images/avatar.png"
+import Body from "components/card/Body"
+import Card from "components/card/Card"
+import Table from "components/card/Table"
+import { useMemo } from "react";
+import { v4 as uuidv4 } from "uuid";
+
+const data = [
+    {
+      id: uuidv4(),
+      name: 'dh',
+      age: 23,
+      phone: '010-1234-1234',
+      email: 'dhkang@naver.com',
+      addr: 'seoul, korea',
+    },
+    {
+      id: uuidv4(),
+      name: 'mike',
+      age: 23,
+      phone: '010-1234-1234',
+      email: 'mike@naver.com',
+      addr: 'seoul, korea',
+    },
+    {
+        id: uuidv4(),
+        name: 'dh',
+        age: 23,
+        phone: '010-1234-1234',
+        email: 'dhkang@naver.com',
+        addr: 'seoul, korea',
+      },
+      {
+        id: uuidv4(),
+        name: 'mike',
+        age: 23,
+        phone: '010-1234-1234',
+        email: 'mike@naver.com',
+        addr: 'seoul, korea',
+      },
+      {
+        id: uuidv4(),
+        name: 'dh',
+        age: 23,
+        phone: '010-1234-1234',
+        email: 'dhkang@naver.com',
+        addr: 'seoul, korea',
+      },
+      {
+        id: uuidv4(),
+        name: 'mike',
+        age: 23,
+        phone: '010-1234-1234',
+        email: 'mike@naver.com',
+        addr: 'seoul, korea',
+      },
+      {
+        id: uuidv4(),
+        name: 'dh',
+        age: 23,
+        phone: '010-1234-1234',
+        email: 'dhkang@naver.com',
+        addr: 'seoul, korea',
+      },
+      {
+        id: uuidv4(),
+        name: 'mike',
+        age: 23,
+        phone: '010-1234-1234',
+        email: 'mike@naver.com',
+        addr: 'seoul, korea',
+      },
+      {
+        id: uuidv4(),
+        name: 'dh',
+        age: 23,
+        phone: '010-1234-1234',
+        email: 'dhkang@naver.com',
+        addr: 'seoul, korea',
+      },
+      {
+        id: uuidv4(),
+        name: 'mike',
+        age: 23,
+        phone: '010-1234-1234',
+        email: 'mike@naver.com',
+        addr: 'seoul, korea',
+      },
+      {
+        id: uuidv4(),
+        name: 'dh',
+        age: 23,
+        phone: '010-1234-1234',
+        email: 'dhkang@naver.com',
+        addr: 'seoul, korea',
+      },
+      {
+        id: uuidv4(),
+        name: 'mike',
+        age: 23,
+        phone: '010-1234-1234',
+        email: 'mike@naver.com',
+        addr: 'seoul, korea',
+      },
+  ];
+
+
 
 const DashboardWrapper = () => {
 
+    const column = useMemo(() => [
+        { id: 'row', header: 'No', accessorFn: (row)=> { 
+            console.log("accessorFn  ::",row)
+            return row?.index ? row.index+1 : 1 
+        }},
+        { id: 'id', header: '아이디', accessorFn: (row) => row.id },
+        { id: 'name', header: '이름', accessorFn: (row) => row.name },
+        { id: 'age', header: '나이', accessorFn: (row) => row.age },
+        { id: 'phone', header: '전화번호', accessorFn: (row) => row.phone },
+        { id: 'email', header: '이메일', accessorFn: (row) => row.email },
+        {
+          id: 'addr',
+          header: '주소',
+          accessorFn: (row) => row.addr,
+        },
+      ],[]);
+
+    console.log("column", column)
     return (
-        <div className="flex justify-center">
-            <div className="overflow-y-auto w-[90%]">
-                <section className="App-section text-gray-100 p-10">Section 1
-                    <div>
-                        <img src={avatar} alt="" />
-                    </div>
-                </section>
-                <section className="App-section text-gray-100 p-10">Section 2
-                    <div>
-                        <img src={avatar} alt="" />
-                    </div>
-                </section>
-                <section className="App-section text-gray-100 p-10">Section 3
-                    <div>
-                        <img src={avatar} alt="" />
-                    </div>
-                </section>
-                <section className="App-section text-gray-100 p-10">Section 5
-                    <div>
-                        <img src={avatar} alt="" />
-                    </div>
-                </section>
-                <section className="App-section text-gray-100 p-10">Section 6
-                    <div>
-                        <img src={avatar} alt="" />
-                    </div>
-                </section>
-                <section className="App-section text-gray-100 p-10">Section 7
-                    <div>
-                        <img src={avatar} alt="" />
-                    </div>
-                </section>
-                <section className="App-section text-gray-100 p-10">Section 8
-                    <div>
-                        <img src={avatar} alt="" />
-                    </div>
-                </section>
-                <section className="App-section text-gray-100 p-10">Section 9
-                    <div>
-                        <img src={avatar} alt="" />
-                    </div>
-                </section>
-            </div>
-        </div>
+        <Body>
+            <h5 class="card-header">Table Basic</h5>
+            <Card header={"header title 1 "}>
+                <Table data={data} columns={column}/>
+            </Card>
+            <Card header={"header title 2"}/>
+            <Card header={"header title 3 "}/>
+        </Body>
     )
 }
 

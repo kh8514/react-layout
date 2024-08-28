@@ -1,17 +1,18 @@
+@import "assets/scss/variable.scss";
 
 $layout-light-bg-color: #f5f5f5;
 
 $sidebar-min-width: 83px;
 $sidebar-max-width: 260px;
 
-$sidebar-bg-color: #fff;
+$sidebar-light-bg-color: $light-bg-color;
 
-$sidebar-light-hover: #bbbbbb;
-$sidebar-light-active-hover:#ececec;
-$sidebar-light-color: #384551;
+$sidebar-light-hover: $light-hover;
+$sidebar-light-active-hover:$light-active-hover;
+$sidebar-light-color: $light-color;
+$sidebar-light-box-shadow: $light-box-shadow;
 
-$sidebar-dark-hover: #6936b6;
-$sidebar-dark-active-hover:#8f44fd;
-$sidebar-dark-color: #e1ecff;
-
+$sidebar-dark-hover: $dark-hover;
+$sidebar-dark-active-hover:$dark-active-hover;
+$sidebar-dark-color: $dark-color;
 

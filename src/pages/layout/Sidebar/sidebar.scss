@@ -14,12 +14,20 @@ button {
 .sidebar {
   width: $sidebar-min-width;
   height: 100%;
-  gap: 8px;
   padding: 0 16px;
-  background: $sidebar-bg-color;
-  border-right: 1px solid #c5c5c5;
-  backdrop-filter: blur(10px);
+  background: $sidebar-light-bg-color;
+  box-shadow: $sidebar-light-box-shadow;
   transition: width 0.45s;
+  overflow-x: hidden;
+
+  -ms-overflow-style: none; /* 인터넷 익스플로러 */
+  scrollbar-width: none; /* 파이어폭스 */
+  
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+ 
 
   &.open {
     width: $sidebar-max-width;

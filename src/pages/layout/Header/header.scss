@@ -1,5 +1,8 @@
+@import "../variable.scss";
+
 .nav-header {
     backdrop-filter: blur(10px);
+    z-index: 1500;
 }
 
 .nav-menu {
@@ -8,4 +11,6 @@
     min-width: 90%;
     padding: 15px 30px;
     border-radius: 5px;
+
+    box-shadow: $sidebar-light-box-shadow;
 }
